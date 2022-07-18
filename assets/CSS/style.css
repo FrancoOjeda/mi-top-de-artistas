@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* contenedor principal */
+
+.main-container{
+    display: grid;
+    
+}
+
+img{
+    width: 250px;
+    height: 250px;
+}
+
+/* encabezado */
+
+.encabezado{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado p {
+    width: 60ch;
+}
+
+/* parrafo descriptivo */
+
+.description{
+    align-self: center;
+    justify-self: center;
+}
+/* contenido principal */
+
+/* .main-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-template-rows: minmax(auto, 1fr)
+} */
+
+/* primer tarjeta flip */
+
+.main-content{
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 10px;
+}
+
+.lit, .trueno, .leon, .rene, .siddhartha, .duki, .tiago, .mon, .cancerbero{
+    width: 250px;
+    height: 250px;
+    background: orange;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1.5s ease;
+}
+
+.front, .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 15px;
+}
+
+.lit:hover {
+    transform: rotateY(180deg);
+}
+.trueno:hover{
+    transform: rotateY(180deg);
+}
+
+.leon:hover{
+    transform: rotateY(180deg);
+}
+
+.rene:hover{
+    transform: rotateY(180deg);
+}
+
+.siddhartha:hover{
+    transform: rotateY(180deg);
+}
+
+.duki:hover{
+    transform: rotateY(180deg);
+}
+
+.mon:hover{
+    transform: rotateY(180deg);
+}
+
+.tiago:hover{
+    transform: rotateY(180deg);
+}
+
+.cancerbero:hover{
+    transform: rotateY(180deg);
+}
