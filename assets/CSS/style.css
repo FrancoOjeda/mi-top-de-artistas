@@ -8,7 +8,13 @@ body{
 
 .main-container{
     display: grid;
-    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header"
+                        "aside main main main"
+                        "aside main main main"
+                        "aside main main main"
+                        "footer footer footer footer";
 }
 
 img{
@@ -24,6 +30,10 @@ img{
     justify-content: center;
     display: flex;
     flex-direction: column;
+    background-color: rgb(194, 222, 209);
+    color: rgb(53, 66, 89);
+    grid-area: header;
+    margin: 1%;
 }
 
 .encabezado p {
@@ -38,32 +48,32 @@ img{
 }
 /* contenido principal */
 
-/* .main-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    grid-template-rows: minmax(auto, 1fr)
-} */
-
-/* primer tarjeta flip */
 
 .main-content{
-    margin: 50px auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: 1%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-items: center;
+    background-color: hsl(152, 30%, 82%);
+
 }
 
 .card{
-    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: rgb(53, 66, 89);
+    margin: 1.5%;
 }
 
 .lit, .trueno, .leon, .rene, .siddhartha, .duki, .tiago, .mon, .cancerbero{
     width: 250px;
     height: 250px;
-    background: orange;
+    background: rgb(205, 194, 174);
     position: relative;
     transform-style: preserve-3d;
     transition: 1.5s ease;
+    /* margin: 4em; */
 }
 
 .front, .back{
@@ -113,4 +123,48 @@ img{
 
 .cancerbero:hover{
     transform: rotateY(180deg);
+}
+
+button{
+    color: rgb(53, 66, 89);
+    border-radius: 2em;
+    border: none;
+    background-color: rgb(205, 194, 174);
+}
+
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin: 0;
+    justify-items: center;
+}
+
+li{
+    list-style-type: none;
+    text-transform: inherit;
+}
+
+li a{
+    color: rgb(53, 66, 89);
+    text-decoration: none;
+}
+
+.navbar{
+    background-color: rgb(236, 229, 199);
+    margin: 1%;
+    border-top:1px solid rgb(205, 194, 174)
+
+}
+
+footer{
+    background-color: rgb(194, 222, 209);
+    border-top: 1.5px solid rgb(53, 66, 89);
+    padding-top: 0.5em;
+    margin: 1%;
+
+}
+
+@media screen {
+    
 }
