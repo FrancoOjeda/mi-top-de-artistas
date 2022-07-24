@@ -104,6 +104,21 @@ ul{
     justify-items: center;
 }
 
+@media screen and (max-width: 768px) {
+    
+    video{width: 25em;
+    }
+
+    li{
+        padding:.5em;
+        margin: 1.2em;
+    }
+    .main-container{
+        grid-template-columns: 20% 80%;
+    }
+}
+    
+
 @media screen and (max-width: 576px) {
     body{
         margin: 0;
@@ -164,4 +179,4 @@ ul{
         margin: 2em 0;
     }
 }
-    
+
